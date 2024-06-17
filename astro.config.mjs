@@ -1,16 +1,12 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 import auth from "auth-astro";
+
 import cloudflare from "@astrojs/cloudflare";
 
-import react from "@astrojs/react";
-
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    auth({ ssr: { noExternal: ['node:path'] } }),
-    react()
-  ],
+  integrations: [tailwind(), react(), auth()],
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],
