@@ -8,7 +8,7 @@ import BadgeCategorys from "@/components/blog/BadgeCategorys.astro";
 import { IconSparkles, IconLayout2 } from "@tabler/icons-react";
 
 import { getSession } from "auth-astro/server";
-const session = await getSession(Astro.request);
+/* const session = await getSession(Astro.request); */
 ---
 
 <LayoutBlog title="Blog de Haiver">
@@ -27,9 +27,12 @@ const session = await getSession(Astro.request);
                 <HistoryPots />
             </section>
             <section class="sticky top-20 mt-6 h-min w-full flex-shrink-0 md:mt-0 md:w-[336px] md:-translate-y-2.5">
-                {session ?
+                <!-- {session ?
                 <SectionAccount /> :
-                <SectionLogin />}
+                <SectionLogin />} -->
+                
+                <SectionAccount />
+                <SectionLogin />
 
                 <div class="mt-4 rounded-md border-2 border-white/20 bg-white/5 p-3">
                     <h2 class="flex items-center justify-center space-x-2">
