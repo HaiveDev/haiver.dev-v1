@@ -5,7 +5,7 @@ IconBrandGoogle,
 IconBrandGithub,
 } from "@tabler/icons-react";
 
-import { SignIn } from "auth-astro/components";
+/* import { SignIn } from "auth-astro/components"; */
 ---
 
 <div class="relative rounded-md border-2 border-white/20 bg-white/5 p-3">
@@ -19,10 +19,15 @@ import { SignIn } from "auth-astro/components";
         <span class="text-center text-base font-bold">Inicia sesión</span>
     </h2>
     <div class="mt-4 flex flex-col space-y-2">
-        <SignIn provider="github"
+        <!-- <SignIn provider="github"
             class="flex items-center justify-center space-x-2 rounded-md border-white/40 bg-white/15 px-3 py-2 text-sm font-semibold transition-all hover:bg-white/20">
             <IconBrandGithub width={20} height={20} />
             <span>Iniciar con Github</span>
-        </SignIn>
+        </SignIn> -->
+        <button
+            class="flex items-center justify-center space-x-2 rounded-md border-white/40 bg-white/15 px-3 py-2 text-sm font-semibold transition-all hover:bg-white/20">
+            <IconBrandGithub width={20} height={20} />
+            <span>Iniciar con Github</span>
+        </button>
     </div>
 </div>

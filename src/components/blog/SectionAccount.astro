@@ -1,10 +1,10 @@
 ---
 // Importaciones
 import {IconLogout, IconDots, IconStar} from "@tabler/icons-react";
-import {SignOut} from "auth-astro/components";
-import {getSession} from "auth-astro/server";
+/* import {SignOut} from "auth-astro/components"; */
+/* import {getSession} from "auth-astro/server"; */
 
-const session = await getSession(Astro.request);
+/* const session = await getSession(Astro.request); */
 ---
 
 <div class="relative rounded-md border-2 border-white/20 bg-white/5 p-3">
@@ -20,20 +20,25 @@ const session = await getSession(Astro.request);
                 favoritos
                 <IconStar width={16} height={16} />
             </a>
-            <SignOut
+            <!-- <SignOut
                 class="flex w-full items-center justify-between rounded-md px-2.5 py-2 text-sm text-white/50 transition-all hover:bg-red-500/5 hover:text-red-500">
                 Cerrar sesión
                 <IconLogout width={16} height={16} />
-            </SignOut>
+            </SignOut> -->
+            <button
+                class="flex w-full items-center justify-between rounded-md px-2.5 py-2 text-sm text-white/50 transition-all hover:bg-red-500/5 hover:text-red-500">
+                Cerrar sesión
+                <IconLogout width={16} height={16} />
+            </button>
         </div>
     </div>
-    <div class="flex items-center space-x-2">
+    <!-- <div class="flex items-center space-x-2">
         <img class="h-12 w-12 rounded-md" src={session?.user?.image} alt=`foto de perfil de ${session?.user?.name}` />
         <div class="text-left">
             <p class="text-sm font-bold">{session?.user?.name}</p>
             <p class="text-xs text-gray-400">{session?.user?.email}</p>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <style>
