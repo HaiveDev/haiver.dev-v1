@@ -14,7 +14,6 @@
     "@astrojs/cloudflare": "^10.4.0",
     "@astrojs/react": "^3.5.0",
     "@astrojs/tailwind": "^5.1.0",
-    "@auth/core": "^0.32.0",
     "@midudev/tailwind-animations": "^0.0.7",
     "@tabler/icons-react": "^3.6.0",
     "@types/react": "^18.3.3",
