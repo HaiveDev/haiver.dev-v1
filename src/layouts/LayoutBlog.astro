@@ -1,6 +1,5 @@
 ---
-import { pwaInfo } from 'virtual:pwa-info';
-
+import { IconX } from '@tabler/icons-react'
 import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
 import FooterBlog from "@/components/blog/FooterBlog.astro";
@@ -8,7 +7,7 @@ import ScrollToTopButton from "@/components/ScrollTopBtn";
 import { getI18N } from "@/i18n";
 
 interface Props {
-title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -52,12 +51,18 @@ const i18n = getI18N({ currentLocale });
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="7 days" />
     <meta name="theme-color" content="#21272a">
-    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
-    <script src="/src/pwa.ts"></script>
     <ViewTransitions />
 </head>
 
 <body class="relative bg-neutral-950 text-white selection:bg-purple-200/20 selection:text-gray-400">
+    <div id="notification-banner" class="bg-[#fcfcfcfc] text-black py-4 px-4 md:px-20 flex justify-between items-center w-full z-10 ">
+        <div>
+            {i18n.BANNER_TXT_1} <a href="https://haiver.dev/" class="underline">{i18n.BANNER_TXT_2}</a>. 🍔
+        </div>
+        <button id="close-banner" class="text-black">
+            <IconX width={24} height={24} />
+        </button>
+    </div>
     <div class="pointer-events-none absolute h-screen object-cover">
         <img src="/backgroundBlog.webp" alt="background"
             class="fixed h-screen w-screen object-cover opacity-20 blur-3xl" />
